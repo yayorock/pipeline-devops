@@ -8,7 +8,7 @@ def call(stages) {
     def stagesList = stages.split(";")
 
     stagesList.each{
-        println(it)
+        println(${it})
     }
 
     env.TAREA = 'Paso 1: Build && Test'
