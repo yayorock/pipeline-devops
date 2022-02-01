@@ -3,8 +3,15 @@
     def ejecucion = load 'script.groovy'
     ejecucion.call()
 */
-env.TAREA = 'Paso 1: Build && Test'
-def call() {
+
+def call(stages) {
+    def stagesList = stages.split(";")
+
+    stagesList.each{
+        println(it)
+    }
+
+    env.TAREA = 'Paso 1: Build && Test'
     stage("${env.TAREA}") {
         sh 'gradle clean build'
     }

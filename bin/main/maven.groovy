@@ -4,7 +4,7 @@
     ejecucion.call()
 */
 env.TAREA = 'Paso 1: Compliar'
-def call() {
+def call(stages) {
     stage("${env.TAREA}") {
         sh 'mvn clean compile -e'
     }
