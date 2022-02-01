@@ -15,7 +15,6 @@ def call(stages) {
         echo 'El pipeline se ejecutará completo'
         allStages()
     } else {
-        arrayExtentions = new arrayExtentions()
         arrayExtentions.searchKeyInArray(stages, ";", listStagesOrder)
     }
 }
