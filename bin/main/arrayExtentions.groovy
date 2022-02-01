@@ -1,4 +1,4 @@
-package utilities.array
+package utilities
 
 def searchKeyInArray(String keyWordsAsString, String splitIdentifier, Map arrayMapToCompare){
     def _array = []
