@@ -1,5 +1,5 @@
 package utilities.array
-​
+
 def searchKeyInArray(String keyWordsAsString, String splitIdentifier, Map arrayMapToCompare){
     def _array = []
     keyWordsAsString.split("${splitIdentifier}").each{
@@ -16,4 +16,3 @@ def searchKeyInArray(String keyWordsAsString, String splitIdentifier, Map arrayM
     }
     return _array
 }
-return this;
