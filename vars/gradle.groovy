@@ -15,15 +15,7 @@ def call(stages) {
         echo 'El pipeline se ejecutará completo'
         allStages()
     } else {
-        echo 'Stages a ejecutar :' + stages
-        listStagesOrder.each { stageName , stageFunction ->
-                stages.each { stageToExecute ->
-                    if (stageName.equals(stageToExecute)) {
-                    echo 'Ejecutando ' + stageFunction
-                    "${stageFunction}"()
-                    }
-                }
-        }
+        searchKeyInArray(stages, ";", listStagesOrder)
     }
 }
 

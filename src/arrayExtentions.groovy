@@ -16,3 +16,5 @@ def searchKeyInArray(String keyWordsAsString, String splitIdentifier, Map arrayM
     }
     return _array
 }
+
+return this
