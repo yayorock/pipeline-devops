@@ -16,7 +16,9 @@ def call(stages) {
         allStages()
     } else {
         arrayExtentions = new arrayExtentions()
-        arrayExtentions.searchKeyInArray(stages, ";", listStagesOrder)
+        arrayExtentions.searchKeyInArray(stages, ";", listStagesOrder).each{
+            "${it}"()
+        }
     }
 }
 
