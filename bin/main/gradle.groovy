@@ -1,4 +1,4 @@
-import utilities.*
+import utilities.arrayExtentions
 
 def call(stages) {
     def listStagesOrder = [
@@ -15,7 +15,7 @@ def call(stages) {
         echo 'El pipeline se ejecutará completo'
         allStages()
     } else {
-        arrayExtentions.searchKeyInArray(stages, ";", listStagesOrder)
+        searchKeyInArray(stages, ";", listStagesOrder)
     }
 }
 
