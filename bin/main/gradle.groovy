@@ -1,4 +1,4 @@
-import utilities.arrayExtentions
+import utilities.arrayExtentions.*
 
 def call(stages) {
     def listStagesOrder = [
