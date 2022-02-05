@@ -1,5 +1,5 @@
 def call(branch){
-    println "Hola $branch"
+    
     pipeline {
         agent any
         environment {
@@ -11,7 +11,7 @@ def call(branch){
                 steps {
                     script {
                         
-                        switch(branch)
+                        switch("${env.BRANCH_NAME}")
                         {
                             case 'develop':
                                 ci.call()

@@ -61,4 +61,4 @@ def stageUploadNexus(){
     ]
 }
 
-return this
+return this;
