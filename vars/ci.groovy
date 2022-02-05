@@ -8,7 +8,7 @@ def call(){
         'buildAndTest': 'stageCleanBuildTest',
         'sonar': 'stageSonar',
         'runJar': 'stageRunSpring',
-        'rest': 'stageRunTestCurl'
+        'rest': 'stageRunTestCurl',
         'nexusCI': 'stageUploadNexus'
     ]
 
