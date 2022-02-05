@@ -4,7 +4,7 @@
     ejecucion.call()
 */
 
-def call(){
+def call(branch){
   
     pipeline {
         agent any
@@ -12,21 +12,17 @@ def call(){
             NEXUS_USER         = credentials('nexus_user')
             NEXUS_PASSWORD     = credentials('nexus_pass')
         }
-        parameters {
-            choice choices: ['Maven', 'Gradle'], description: 'Seleccione herramienta de compilacion', name: 'compileTool'
-            text description: 'Enviar los stages separados por ";" ... Vacio si necesita todos los stages', name: 'stages'
-        }
         stages {
             stage('Pipeline') {
                 steps {
                     script {
-                        switch(params.compileTool)
+                        switch(branch)
                         {
-                            case 'Maven':
-                                maven.call(params.stages)
+                            case 'develop':
+                                ci.call()
                             break;
-                            case 'Gradle':
-                                gradle.call(params.stages)
+                            case 'release':
+                                cd.call()
                             break;
                         }
                     }
