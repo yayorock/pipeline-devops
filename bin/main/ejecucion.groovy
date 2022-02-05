@@ -10,8 +10,8 @@ def call(){
             stage('Pipeline') {
                 steps {
                     script {
-                        
-                        switch("${env.BRANCH_NAME}")
+                        sh 'echo "${env.BRANCH_NAME}"'
+                        switch("")
                         {
                             case 'develop':
                                 ci.call()
