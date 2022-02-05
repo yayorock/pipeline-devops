@@ -2,7 +2,7 @@ import utilities.*
 
 def call(){
 
-    fliget " Integracion Continua "
+    figlet " Integracion Continua "
 
     def listStagesOrder = [
         'buildAndTest': 'stageCleanBuildTest',
