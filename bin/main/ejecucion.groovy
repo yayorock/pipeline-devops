@@ -1,5 +1,5 @@
 def call(){
-    figlet " Gradle  "
+
     pipeline {
         agent any
         environment {
@@ -10,6 +10,7 @@ def call(){
             stage('Pipeline') {
                 steps {
                     script {
+                        figlet " Gradle  "
                         switch("${env.BRANCH_NAME}")
                         {
                             case 'develop':

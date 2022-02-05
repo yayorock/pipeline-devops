@@ -13,7 +13,7 @@ def call(){
     ]
 
     listStagesOrder.each{
-        "${it}"()
+        "${it.value}"()
     }
 }   
 def stageCleanBuildTest(){
