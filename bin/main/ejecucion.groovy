@@ -8,7 +8,7 @@ def call(branch){
         }
         stages {
             stage('Pipeline') {
-                fliget " Gradle "
+                figlet " Gradle "
                 steps {
                     script {
                         switch(branch)
