@@ -1,9 +1,3 @@
-/*
-    forma de invocación de método call:
-    def ejecucion = load 'script.groovy'
-    ejecucion.call()
-*/
-
 def call(branch){
   
     pipeline {
@@ -14,6 +8,7 @@ def call(branch){
         }
         stages {
             stage('Pipeline') {
+                fliget " Gradle "
                 steps {
                     script {
                         switch(branch)
