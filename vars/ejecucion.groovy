@@ -1,5 +1,5 @@
-def call(branch){
-    
+def call(){
+
     pipeline {
         agent any
         environment {
