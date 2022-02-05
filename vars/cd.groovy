@@ -2,7 +2,7 @@ import utilities.*
 
 def call(){
 
-    fliget " Despliegue Continuo "
+    figlet " Despliegue Continuo "
 
     def listStagesOrder = [
         'downloadNexus': 'stageDownloadNexus',
