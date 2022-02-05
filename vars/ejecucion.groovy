@@ -1,5 +1,5 @@
 def call(branch){
-  
+    println "Hola $branch"
     pipeline {
         agent any
         environment {
@@ -10,7 +10,7 @@ def call(branch){
             stage('Pipeline') {
                 steps {
                     script {
-                        echo "$branch"
+                        
                         switch(branch)
                         {
                             case 'develop':
