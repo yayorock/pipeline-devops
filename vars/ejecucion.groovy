@@ -10,6 +10,7 @@ def call(branch){
             stage('Pipeline') {
                 steps {
                     script {
+                        echo "$branch"
                         switch(branch)
                         {
                             case 'develop':
