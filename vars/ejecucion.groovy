@@ -8,7 +8,6 @@ def call(branch){
         }
         stages {
             stage('Pipeline') {
-                figlet " Gradle "
                 steps {
                     script {
                         switch(branch)
