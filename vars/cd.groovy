@@ -7,12 +7,12 @@ def call(){
     def listStagesOrder = [
         'downloadNexus': 'stageDownloadNexus',
         'runDownloadedJar': 'stageRunJar',
-        'rest': 'stageRunTestCurl'
+        'rest': 'stageRunTestCurl',
         'nexusCD': 'stageUploadNexus'
     ]
 
     listStagesOrder.each{
-        "${it}"()
+        "${it.value}"()
     }
 }
 
