@@ -41,24 +41,27 @@ def stageRunTestCurl(){
     }
 }
 def stageUploadNexus(){
-    nexusPublisher nexusInstanceId: 'nexus',
-    nexusRepositoryId: 'devops-usach-nexus',
-    packages: [
-        [$class: 'MavenPackage',
-            mavenAssetList: [
-                [classifier: '',
-                extension: 'jar',
-                filePath: 'build/DevOpsUsach2020-0.0.1.jar'
-            ]
-        ],
-            mavenCoordinate: [
-                artifactId: 'DevOpsUsach2020',
-                groupId: 'com.devopsusach2020',
-                packaging: 'jar',
-                version: '0.0.1'
+    env.DESCRTIPTION_STAGE = 'Subir a nexus '
+    stage("${env.DESCRTIPTION_STAGE}") {
+        nexusPublisher nexusInstanceId: 'nexus',
+        nexusRepositoryId: 'devops-usach-nexus',
+        packages: [
+            [$class: 'MavenPackage',
+                mavenAssetList: [
+                    [classifier: '',
+                    extension: 'jar',
+                    filePath: 'build/DevOpsUsach2020-0.0.1.jar'
+                ]
+            ],
+                mavenCoordinate: [
+                    artifactId: 'DevOpsUsach2020',
+                    groupId: 'com.devopsusach2020',
+                    packaging: 'jar',
+                    version: '0.0.1'
+                ]
             ]
         ]
-    ]
+    }
 }
 
 return this;
